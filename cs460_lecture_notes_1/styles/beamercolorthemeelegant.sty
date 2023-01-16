@@ -1,0 +1,59 @@
+\mode<presentation>
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Main color
+\definecolor{primaryLight}{HTML}{318CE7}
+\definecolor{primary}{HTML}{08457E}
+\definecolor{secondary}{HTML}{F209B1}
+\definecolor{tertiary}{HTML}{2A8000}
+\definecolor{Gray}{HTML}{808080}
+
+\DeclareOptionBeamer{style}{\def\beamer@mytheme@style{#1}}
+\ExecuteOptionsBeamer{style=blue} %default
+\ProcessOptionsBeamer
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Colours
+\RequirePackage{xcolor} 
+
+\setbeamercolor*{background canvas}{bg=white}
+\setbeamercolor*{footer}{fg=Gray}
+\setbeamercolor*{footer text}{fg=primary}
+\setbeamercolor*{footline}{fg=Gray}
+\setbeamercolor*{frametitle}{fg=primary,bg=white}
+\setbeamercolor*{framesubtitle}{fg=secondary,bg=white}
+\setbeamercolor*{title}{fg=primary,bg=white}
+\setbeamercolor*{author}{fg=black,bg=white}
+\setbeamercolor*{part title}{fg=primary}
+\setbeamercolor*{caption name}{fg=primary}
+\setbeamercolor*{section in toc}{fg=black}
+
+\setbeamercolor*{secondary}{fg=secondary!10,bg=white}
+\setbeamercolor*{example text}{fg=tertiary,bg=white}
+\setbeamercolor*{normal text}{fg=black,bg=white}
+\setbeamercolor*{alerted text}{fg=primary,bg=white}
+\setbeamercolor*{itemize item}{fg=primary}
+\setbeamercolor*{itemize subitem}{fg=primary}
+\setbeamercolor*{itemize subsubitem}{fg=primary}
+\setbeamercolor*{enumerate item}{fg=primary}
+\setbeamercolor*{enumerate subitem}{fg=primary}
+\setbeamercolor*{enumerate subsubitem}{fg=primary}
+\setbeamercolor*{description item}{fg=primary}
+\setbeamercolor*{caption name}{fg=black}
+\setbeamercolor{button}{bg=primary,fg=white}
+
+% Default block
+\setbeamercolor{block title}{bg=white, fg=primary}%
+\setbeamercolor{block body}{fg=black}%
+\setbeamercolor{block title alerted}{bg=white, fg=secondary}%
+\setbeamercolor{block body alerted}{bg=white, fg=black}%
+\setbeamercolor{block title example}{bg=white, fg=tertiary}%
+\setbeamercolor{block body example}{bg=white, fg=black}%
+% Bibliography
+\setbeamercolor*{bibliography item}{fg=primary}
+
+\setbeamercolor*{bibliography entry author}{fg=primary}
+\setbeamercolor*{bibliography entry title}{fg=black}
+\setbeamercolor*{bibliography entry location}{fg=black}
+\setbeamercolor*{bibliography entry note}{fg=black}
+
+\mode<all>
