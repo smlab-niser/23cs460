@@ -1,0 +1,45 @@
+\mode<presentation>
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Set Margins around frame title
+\setbeamertemplate{frametitle}{\vspace{1cm} \color{primary}\insertframetitle \par\vskip1pt \color{secondary}{\small\insertframesubtitle} \vspace*{0.5cm}}
+
+% Automatic Frame Titles
+\makeatletter
+  \CheckCommand*\beamer@checkframetitle{%
+    \@ifnextchar\bgroup\beamer@inlineframetitle{}}
+  \renewcommand*\beamer@checkframetitle{%
+    \global\let\beamer@frametitle\relax\@ifnextchar%
+    \bgroup\beamer@inlineframetitle{}}
+\makeatother
+
+\addtobeamertemplate{frametitle}{
+  \ifx\insertframetitle\empty
+    \ifx\insertframesubtitle\empty
+      \ifx\insertsubsection\empty 
+        \frametitle{\insertsectionhead}
+      \else
+        \frametitle{\insertsectionhead}\framesubtitle{\insertsubsectionhead}
+      \fi  
+    \else
+        \frametitle{\insertsectionhead} %If frame title is empty but subtitle is specified by user, insert section as frametitle   
+    \fi  
+    \else       
+    \fi
+ }{}
+
+%\setbeamertemplate{framesubtitle}{\color{primary}\insertframesubtitle\par\vskip6pt \vspace*{0.5cm}}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+% Footer
+
+% Set Margins around footer
+\setbeamertemplate{footline}{
+\hspace*{10mm}
+{\scshape \insertshortauthor \hfill \insertshorttitle \hfill \insertframenumber{} / \inserttotalframenumber}
+\hspace*{10mm} 
+\vspace*{0.6cm}
+}
+
+\mode<all>
+
